@@ -1,5 +1,6 @@
 import { Country } from "../lib/country";
 import { today } from "./dates";
+import Guesser from "../components/Guesser";
 
 const countryData: Country[] = require("../data/country_data.json").features;
 
@@ -15,7 +16,15 @@ function generateKeyNew(list: any[], day: string) {
   return key;
 }
 
-const key = generateKeyNew(countryData, today);
+export function regenerateNewKey(){
+  const countryData: Country[] = require("../data/country_data.json").features;
+  const key = Math.floor(Math.random() * countryData.length);
+  console.log(key);
+  console.log(countryData[key].properties.NAME)
+  return key;
+}
 
-export const answerCountry = countryData[key];
+
+
+export const answerCountry = countryData[regenerateNewKey()];
 export const answerName = answerCountry.properties.NAME;
