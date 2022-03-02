@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import { Country } from "../lib/country";
-import {answerCountry, answerName, regenerateNewKey} from "../util/answer";
+import { answerCountry, answerName } from "../util/answer";
 import { Message } from "./Message";
 import { polygonDistance } from "../util/distance";
 import alternateNames from "../data/alternate_names.json";
@@ -56,7 +56,6 @@ export default function Guesser({ guesses, setGuesses, win, setWin }: Props) {
       return;
     }
     if (guessCountry.properties.NAME === answerName) {
-      regenerateNewKey()
       setWin(true);
     }
     return guessCountry;

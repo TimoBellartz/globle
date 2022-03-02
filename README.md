@@ -24,6 +24,7 @@ Globle is hosted by CloudFlare and uses CloudFlare Web Analytics (CWA), a privac
 - This game was inspired by Wordle and the "Secret Country" geography games from [Sporcle](https://sporcle.com)
 - Country outlines in the Help screen provided by Vemaps.com
 - Favicons are from favicon.io
+-load new country on every reload
 
 # Running the project on your local machine
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). If you want to run the project on your local machine,
